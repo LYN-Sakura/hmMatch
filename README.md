@@ -1,5 +1,6 @@
 # heima_match
->项目KO
+
+>控制台运行 yarn 下载包
 
 1. 按需引入已配置
 2. ESlint检验已优化
