@@ -1,5 +1,11 @@
 # heima_match
->项目大比拼
+>项目KO
+
+1. 按需引入已配置
+2. ESlint检验已优化
+3. 调用axios方式为this.$http
+4. 多写注释!
+
 ## Project setup 
 ```
 yarn install 项目设置
