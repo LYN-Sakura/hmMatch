@@ -40,7 +40,7 @@ export default {
 <style lang="less" scoped>
 .note {
   height: 1080px;
-  background-image: url(../assets/dly_tp.png);
+  background-image: url(../assets/images/dly_tp.png);
 }
 .login_box {
   width: 400px;
@@ -76,9 +76,8 @@ export default {
   background-color: #48bbc2 !important;
   border-color: #48bbc2 !important;
 }
-  .el-button--primary:focus{
-    background-color: #48bbc2;
-    border-color: #48bbc2;
-  }
-
+.el-button--primary:focus {
+  background-color: #48bbc2;
+  border-color: #48bbc2;
+}
 </style>
