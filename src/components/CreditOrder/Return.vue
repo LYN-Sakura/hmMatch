@@ -108,7 +108,7 @@ export default {
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .crumbs {
   padding-top: 30px;
   padding-bottom: 30px;

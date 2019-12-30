@@ -35,7 +35,27 @@
   </el-container>
 </template>
 
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      // 侧边栏导航假数据
+      sideData: [
+        {
+          id: 1,
+          title: '订单管理',
+          children: [
+            {
+              id: 11,
+              title: '订单详情'
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+</script>
 
 <style lang="less" scoped>
 header.el-header {
