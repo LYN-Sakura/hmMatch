@@ -4,6 +4,8 @@ import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 // 引入主页
 import Home from '../components/Home.vue'
+// 引入退货单
+import Return from '../components/CreditOrder/Return.vue'
 
 Vue.use(VueRouter)
 
@@ -18,7 +20,10 @@ const routes = [{
 },
 {
   path: '/home',
-  component: Home
+  component: Home,
+  children: [
+    { path: '/return', component: Return }
+  ]
 }
 ]
 

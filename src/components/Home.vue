@@ -16,8 +16,8 @@
                 <i class="el-icon-location"></i>
                 <span>导航一</span>
               </template>
-                <el-menu-item index="1-1">选项1</el-menu-item>
-                <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item index="1-1">选项1</el-menu-item>
+              <el-menu-item index="1-2">选项2</el-menu-item>
             </el-submenu>
           </el-menu>
         </div>
@@ -90,8 +90,12 @@ header.el-header {
 .el-menu {
   padding-left: 40px;
   border-right: none;
-  .el-menu-item{
+  .el-menu-item {
     text-indent: 2em;
   }
+}
+.el-main {
+  padding: 0;
+  background-color: #f1f1f1;
 }
 </style>
