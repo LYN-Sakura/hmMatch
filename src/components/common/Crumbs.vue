@@ -1,4 +1,4 @@
-<template>
+ <template>
   <div class="bread">
     <!-- 面包屑导航区 -->
     <el-breadcrumb separator-class="el-icon-arrow-right">
@@ -13,7 +13,7 @@ export default {
   props: ['nav1', 'nav2']
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
 .el-breadcrumb__inner {
   color: #666 !important;
 }

@@ -7,6 +7,9 @@ import './assets/css/global.css'
 import './uiPlugin/element.js'
 // 引入axios,并挂载在vue上
 import axios from 'axios'
+
+// 引入iconfont
+import './assets/iconfont/iconfont.css'
 // 引入公共组件
 import Crumbs from '../src/components/common/Crumbs.vue'
 Vue.prototype.$http = axios
