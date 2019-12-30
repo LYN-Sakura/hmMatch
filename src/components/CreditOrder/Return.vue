@@ -53,7 +53,8 @@
         </el-table-column>
       </el-table>
       <div class="pagination">
-        <el-pagination background layout="prev, pager, next" :total="1000"> </el-pagination>
+        <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page.sync="currentPage3" :page-size="100" layout="prev, pager, next, jumper" :total="1000">
+        </el-pagination>
       </div>
     </el-card>
   </div>
@@ -169,5 +170,23 @@ export default {
 }
 .el-form-item__label {
   color: #666 !important;
+}
+.el-pagination .btn-prev {
+  border: 1px solid#4c4c4c;
+  margin-left: 5px !important;
+  border-radius: 5px !important;
+}
+.el-pagination .btn-next {
+  border: 1px solid#4c4c4c;
+  margin-left: 5px !important;
+  border-radius: 5px !important;
+}
+.number {
+  border: 1px solid#4c4c4c;
+  margin-left: 10px !important;
+  border-radius: 5px !important;
+}
+.el-pagination {
+  float: right;
 }
 </style>
