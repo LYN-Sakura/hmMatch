@@ -6,7 +6,6 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 // 引入退货单
 import Return from '../components/CreditOrder/Return.vue'
-
 Vue.use(VueRouter)
 
 // 路由规则
