@@ -29,7 +29,8 @@ import {
   Table,
   TableColumn,
   Pagination,
-  Row
+  Row,
+  Alert
 } from 'element-ui'
 
 Vue.use(Container)
@@ -61,3 +62,4 @@ Vue.use(TableColumn)
 Vue.use(Table)
 Vue.use(Pagination)
 Vue.use(Row)
+Vue.use(Alert)

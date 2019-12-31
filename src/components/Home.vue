@@ -47,17 +47,17 @@ export default {
             {
               id: 11,
               title: '采购管理',
-              path: '/caigou1'
+              path: 'caigou1'
             },
             {
               id: 12,
               title: '修真单管理',
-              path: '/caigou2'
+              path: 'caigou2'
             },
             {
               id: 13,
               title: '退货单管理',
-              path: '/caigou3'
+              path: 'return'
             }
           ]
         },
@@ -68,7 +68,7 @@ export default {
             {
               id: 21,
               title: '商品明细',
-              path: '/caigou4'
+              path: 'caigou4'
             }
           ]
         }
@@ -136,5 +136,8 @@ header.el-header {
     text-indent: 2em;
   }
 }
-
+.el-main{
+  height: 990px;
+  overflow: hidden;
+}
 </style>
