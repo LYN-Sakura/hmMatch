@@ -13,3 +13,7 @@ body,
 .el-table th.gutter {
   display: table-cell !important;
 }
+.el-main {
+  padding: 0;
+  background-color: #f1f1f1;
+}

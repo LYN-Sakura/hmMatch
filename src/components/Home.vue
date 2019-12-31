@@ -136,8 +136,5 @@ header.el-header {
     text-indent: 2em;
   }
 }
-.el-main {
-  padding: 0;
-  background-color: #f1f1f1;
-}
+
 </style>
