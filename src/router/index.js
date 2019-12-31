@@ -6,6 +6,8 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 // 引入退货单
 import Return from '../components/CreditOrder/Return.vue'
+// 引入商品管理页面
+import Commodity from '../components/Commodity/Commodity.vue'
 
 Vue.use(VueRouter)
 
@@ -22,7 +24,8 @@ const routes = [{
   path: '/home',
   component: Home,
   children: [
-    { path: '/return', component: Return }
+    { path: '/return', component: Return },
+    { path: '/Commodity', component: Commodity }
   ]
 }
 ]
