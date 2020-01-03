@@ -6,6 +6,12 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 // 引入退货单
 import Return from '../components/CreditOrder/Return.vue'
+// 引入修正单-待核单
+import Audit from '../components/Correcting/audit.vue'
+// 引入修正单-审核通过
+import Pass from '../components/Correcting/pass.vue'
+// 引入修正单-审核不通过
+import NoPass from '../components/Correcting/noPass.vue'
 Vue.use(VueRouter)
 
 // 路由规则
@@ -21,7 +27,10 @@ const routes = [{
   path: '/home',
   component: Home,
   children: [
-    { path: '/return', component: Return }
+    { path: '/return', component: Return },
+    { path: '/audit', component: Audit },
+    { path: '/pass', component: Pass },
+    { path: '/nopass', component: NoPass }
   ]
 }
 ]
