@@ -1,4 +1,4 @@
- <template>
+<template>
   <div class="bread">
     <!-- 面包屑导航区 -->
     <el-breadcrumb separator-class="el-icon-arrow-right">

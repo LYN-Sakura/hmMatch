@@ -1,40 +1,46 @@
 <template>
   <div class="boay">
     <!-- 面包屑导航 -->
-    <crumbs class="crumbs" nav1="订单管理" nav2="退货单管理"></crumbs>
+    <!-- 面包屑导航 -->
+    <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb-item :to="{ path: '/home' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item>订单管理</el-breadcrumb-item>
+      <el-breadcrumb-item>退货单管理</el-breadcrumb-item>
+      <el-breadcrumb-item>退货单详情</el-breadcrumb-item>
+    </el-breadcrumb>
     <!-- 头部退货区域  -->
     <el-card class="card_f">
-      <el-form :inline="true" label-width="1500" border :inline-message="true" :data="form">
-        <el-row>
-          <el-col :span="8" class="return">
-            <el-form-item label="退货时间" size="mini">
-              <el-date-picker v-model="value" type="daterange" start-placeholder="开始日期" end-placeholder="结束日期" :default-time="['00:00:00', '23:59:59']"> </el-date-picker>
-            </el-form-item>
-          </el-col>
-          <el-col :span="6">
-            <el-form-item label="退货单编号" size="mini">
-              <el-input v-model="form.name"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="5">
-            <el-form-item label="门店编号" size="mini">
-              <el-input v-model="form.name"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="5">
-            <el-form-item label="门店名称" size="mini">
-              <el-input v-model="form.name"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row justify="end" type="flex">
-          <el-col :span="4" :offset="20">
-            <el-form-item size="mini" class="btn">
-              <el-button size="mini" round icon="el-icon-search" class="serch">搜索</el-button>
-              <el-button size="mini" round icon="el-icon-refresh">重置</el-button>
-            </el-form-item>
-          </el-col>
-        </el-row>
+      <el-form :inline="true" v-model="form" label-width="1500" border :inline-message="true" :data="form">
+        <el-form-item label="创建日期" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="退货单编号" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="门店" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="退货状态" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item class="btnBox">
+          <el-button round class="btn" size="mini">
+            <img src="../../../public/uploads/middle_return.png" class="img" alt="" />
+            返回</el-button
+          >
+        </el-form-item>
+        <el-form-item label="退货品项数" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="退货总数" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="退货总金额" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="审核意见" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
       </el-form>
     </el-card>
     <!-- 退货body -->
@@ -42,15 +48,16 @@
       <!-- <el-table :data="tableData" header-cell-style="background-color:#f1f1f1;" cell-style="background-color:#f1f1f1;"> -->
       <el-table :data="tableData" :header-cell-class-name="headerStyle" :cell-style="cellStyle">
         <el-table-column type="selection" width="55"> </el-table-column>
-        <el-table-column prop="date" label="退货单编号" width="180"> </el-table-column>
-        <el-table-column prop="name" label="创建日期" width="180"> </el-table-column>
-        <el-table-column prop="address" label="门店"> </el-table-column>
-        <el-table-column prop="address" label="退货品项数"> </el-table-column>
-        <el-table-column prop="address" label="退货总数"> </el-table-column>
+        <el-table-column prop="date" label="货号" width="180"> </el-table-column>
+        <el-table-column prop="name" label="品名" width="180"> </el-table-column>
+        <el-table-column prop="address" label="进价"> </el-table-column>
+        <el-table-column prop="address" label="退货数量"> </el-table-column>
         <el-table-column prop="address" label="退货总金额"> </el-table-column>
-        <el-table-column label="操作" class="read">
-          <span style="color: #47bac2;"> 查看</span>
-        </el-table-column>
+        <el-table-column prop="address" label="规格"> </el-table-column>
+        <el-table-column prop="address" label="单位"> </el-table-column>
+        <el-table-column prop="address" label="保质期"> </el-table-column>
+        <el-table-column prop="address" label="温层"> </el-table-column>
+        <el-table-column prop="address" label="退货原因"> </el-table-column>
       </el-table>
       <div class="pagination">
         <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page.sync="currentPage3" :page-size="100" layout="prev, pager, next, jumper" :total="1000">
@@ -73,6 +80,7 @@ export default {
         resource: '',
         desc: ''
       },
+      currentPage3: 3,
       value: '',
       tableData: [
         {
@@ -105,56 +113,25 @@ export default {
     },
     cellStyle({ row, col, rowIndex, colIndex }) {
       return ' background-color: #f1f1f1 !important; text-align:center;color: #333;'
-    }
+    },
+    currentPage() {},
+    handleSizeChange() {},
+    handleCurrentChange() {}
   }
 }
 </script>
-/*
-<style lang="less">
-.table-th {
-  background-color: #f1f1f1 !important;
-  text-align: center !important;
-  height: 60px;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-  color: #333;
+<style lang="less" scoped>
+.el-card {
+  border-radius: 10px !important;
 }
-.el-checkbox__inner {
-  border: 1px solid #323232 !important;
-}
-.el-form-item__label {
+.el-breadcrumb__inner {
   color: #666 !important;
 }
-.el-pagination .btn-prev {
-  border: 1px solid#4c4c4c;
-  margin-left: 5px !important;
-  border-radius: 5px !important;
-}
-.el-pagination .btn-next {
-  border: 1px solid#4c4c4c;
-  margin-left: 5px !important;
-  border-radius: 5px !important;
-}
-.number {
-  border: 1px solid#4c4c4c;
-  margin-left: 10px !important;
-  border-radius: 5px !important;
-}
-.el-pagination {
-  float: right;
-  margin-top: 29px;
-}
-</style>
-
-<style lang="less" scoped>
-.crumbs {
+.el-breadcrumb {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-left: 62px;
   background-color: #f1f1f1;
-}
-.el-card {
-  border-radius: 10px !important;
 }
 .card_f {
   height: 160px;
@@ -196,17 +173,17 @@ export default {
   color: #fff !important;
   background-color: #47bac2;
 }
-/* .table-th {
+.table-th {
   background-color: #f1f1f1 !important;
   text-align: center !important;
   height: 60px;
   font-size: 16px !important;
   font-weight: 500 !important;
   color: #333;
-} */
-/* .el-checkbox__inner {
+}
+.el-checkbox__inner {
   border: 1px solid #323232 !important;
-} */
+}
 .el-form-item__label {
   color: #666 !important;
 }
@@ -228,5 +205,28 @@ export default {
 .el-pagination {
   float: right;
   margin-top: 29px;
+}
+.btnBox {
+  float: right;
+  margin-top: 20px !important;
+  padding: 0 !important;
+  width: 213px;
+  height: 23px;
+}
+.el-form-item el-form-item--mini {
+  width: 250px;
+}
+.btn {
+  position: absolute;
+  right: -170px;
+  top: -25px;
+  width: 94px;
+  height: 29px;
+  font-size: 14px !important;
+  margin-bottom: 30px !important;
+}
+.img {
+  vertical-align: middle;
+  margin-top: -3px;
 }
 </style>

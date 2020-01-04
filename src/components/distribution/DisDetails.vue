@@ -4,58 +4,55 @@
     <crumbs class="crumbs" nav1="订单管理" nav2="退货单管理"></crumbs>
     <!-- 头部退货区域  -->
     <el-card class="card_f">
-      <el-form :inline="true" label-width="1500" border :inline-message="true" :data="form">
-        <el-row>
-          <el-col :span="8" class="return">
-            <el-form-item label="退货时间" size="mini">
-              <el-date-picker v-model="value" type="daterange" start-placeholder="开始日期" end-placeholder="结束日期" :default-time="['00:00:00', '23:59:59']"> </el-date-picker>
-            </el-form-item>
-          </el-col>
-          <el-col :span="6">
-            <el-form-item label="退货单编号" size="mini">
-              <el-input v-model="form.name"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="5">
-            <el-form-item label="门店编号" size="mini">
-              <el-input v-model="form.name"></el-input>
-            </el-form-item>
-          </el-col>
-          <el-col :span="5">
-            <el-form-item label="门店名称" size="mini">
-              <el-input v-model="form.name"></el-input>
-            </el-form-item>
-          </el-col>
-        </el-row>
-        <el-row justify="end" type="flex">
-          <el-col :span="4" :offset="20">
-            <el-form-item size="mini" class="btn">
-              <el-button size="mini" round icon="el-icon-search" class="serch">搜索</el-button>
-              <el-button size="mini" round icon="el-icon-refresh">重置</el-button>
-            </el-form-item>
-          </el-col>
-        </el-row>
+      <el-form :inline="true" v-model="form" label-width="1500" border :inline-message="true" :data="form">
+        <el-form-item label="配送单编号" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="配送方" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="配送方联系电话 " size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="关联采购单编号" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="验收状态" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="验收日期" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="配送品项数" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="配送总数量" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="配送总金额(元)" size="mini">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
       </el-form>
     </el-card>
     <!-- 退货body -->
     <el-card class="card_b">
       <!-- <el-table :data="tableData" header-cell-style="background-color:#f1f1f1;" cell-style="background-color:#f1f1f1;"> -->
       <el-table :data="tableData" :header-cell-class-name="headerStyle" :cell-style="cellStyle">
-        <el-table-column type="selection" width="55"> </el-table-column>
-        <el-table-column prop="date" label="退货单编号" width="180"> </el-table-column>
-        <el-table-column prop="name" label="创建日期" width="180"> </el-table-column>
-        <el-table-column prop="address" label="门店"> </el-table-column>
-        <el-table-column prop="address" label="退货品项数"> </el-table-column>
-        <el-table-column prop="address" label="退货总数"> </el-table-column>
-        <el-table-column prop="address" label="退货总金额"> </el-table-column>
-        <el-table-column label="操作" class="read">
-          <span style="color: #47bac2;"> 查看</span>
-        </el-table-column>
+        <el-table-column prop="date" label="货号"> </el-table-column>
+        <el-table-column prop="name" label="国际条码"> </el-table-column>
+        <el-table-column prop="address" label="品名"> </el-table-column>
+        <el-table-column prop="address" label="规格"> </el-table-column>
+        <el-table-column prop="address" label="单位"> </el-table-column>
+        <el-table-column prop="address" label="温层"> </el-table-column>
+        <el-table-column prop="address" label="保质期"> </el-table-column>
+        <el-table-column prop="address" label="订购总数"> </el-table-column>
+        <el-table-column prop="address" label="实际发货数"> </el-table-column>
+        <el-table-column prop="address" label="实际收货数"> </el-table-column>
+        <el-table-column prop="address" label="缺货数"> </el-table-column>
+        <el-table-column prop="address" label="拒收数"> </el-table-column>
+        <el-table-column prop="address" label="拒收原因"> </el-table-column>
+        <el-table-column prop="address" label="操作"> </el-table-column>
       </el-table>
-      <div class="pagination">
-        <el-pagination @size-change="handleSizeChange" @current-change="handleCurrentChange" :current-page.sync="currentPage3" :page-size="100" layout="prev, pager, next, jumper" :total="1000">
-        </el-pagination>
-      </div>
     </el-card>
   </div>
 </template>
