@@ -10,14 +10,13 @@
             <i class="iconfont icon-home"></i>
             首页
           </div>
-          <el-menu default-active="2" class="el-menu-vertical-demo" background-color="#313743" text-color="#d1d2d4" active-text-color="#ffd04b">
-            <el-submenu index="1">
+          <el-menu router default-active="2" class="el-menu-vertical-demo" background-color="#313743" text-color="#d1d2d4" active-text-color="#ffd04b">
+            <el-submenu :index="i + ''" v-for="(val1, i) in sideData" :key="val1.id">
               <template slot="title">
                 <i class="el-icon-location"></i>
-                <span>导航一</span>
+                <span>{{ val1.title }}</span>
               </template>
-              <el-menu-item index="1-1">选项1</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item :index="'/' + val2.path" v-for="val2 in val1.children" :key="val2.id">{{val2.title}}</el-menu-item>
             </el-submenu>
           </el-menu>
         </div>
@@ -47,11 +46,34 @@ export default {
           children: [
             {
               id: 11,
-              title: '订单详情'
+              title: '采购管理',
+              path: '/caigou1'
+            },
+            {
+              id: 12,
+              title: '修真单管理',
+              path: '/caigou2'
+            },
+            {
+              id: 13,
+              title: '退货单管理',
+              path: '/caigou3'
+            }
+          ]
+        },
+        {
+          id: 2,
+          title: '商品管理',
+          children: [
+            {
+              id: 21,
+              title: '商品明细',
+              path: '/caigou4'
             }
           ]
         }
       ]
+      // 一级标题图标
     }
   }
 }
