@@ -8,6 +8,8 @@ import Home from '../components/Home.vue'
 import Return from '../components/CreditOrder/Return.vue'
 // 引入首页
 import HomePage from '../components/homePage/HomePage.vue'
+// 引入修正订单管理
+import AmendEdit from '../components/amend/AmendEdit.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +33,10 @@ const routes = [{
   {
     path: '/homePage',
     component: HomePage
+  },
+  {
+    path: '/amendEdit',
+    component: AmendEdit
   }
   ]
 }
