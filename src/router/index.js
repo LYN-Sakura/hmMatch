@@ -20,7 +20,12 @@ import Sure from '../components/distribution/SureSend.vue'
 import HomePage from '../components/homePage/HomePage.vue'
 // 引入修正订单管理
 import AmendEdit from '../components/amend/AmendEdit.vue'
-
+// 引入修正单-待核单
+import Audit from '../components/Correcting/audit.vue'
+// 引入修正单-审核通过
+import Pass from '../components/Correcting/pass.vue'
+// 引入修正单-审核不通过
+import NoPass from '../components/Correcting/noPass.vue'
 Vue.use(VueRouter)
 
 // 路由规则
@@ -49,10 +54,6 @@ const routes = [{
     component: AmendEdit
   },
   {
-    path: '/return',
-    component: Return
-  },
-  {
     path: '/ReDetails',
     component: ReDetails
   },
@@ -71,11 +72,20 @@ const routes = [{
   {
     path: '/Sure',
     component: Sure
+  }, {
+    path: '/audit',
+    component: Audit
+  }, {
+    path: '/pass',
+    component: Pass
+  },
+  {
+    path: '/nopass',
+    component: NoPass
   }
   ]
 }
 ]
-
 const router = new VueRouter({
   routes
 })
