@@ -6,7 +6,10 @@ import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
 // 引入退货单
 import Return from '../components/CreditOrder/Return.vue'
-
+// 引入采购单管理
+import Purchase from '../components/pzxiede/Purchase.vue'
+// 引入订单管理
+import Order from '../components/pzxiede/Order.vue'
 Vue.use(VueRouter)
 
 // 路由规则
@@ -21,8 +24,17 @@ const routes = [{
 {
   path: '/home',
   component: Home,
-  children: [
-    { path: '/return', component: Return }
+  children: [{
+    path: '/return',
+    component: Return
+  },
+  {
+    path: '/purchase',
+    component: Purchase
+  }, {
+    path: '/order',
+    component: Order
+  }
   ]
 }
 ]
