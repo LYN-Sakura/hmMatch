@@ -2,18 +2,20 @@
 html,
 body,
 #app {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  width: 1920px;
-  height: 1080px;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0 auto;
+	width: 1920px;
+	height: 1080px;
 }
+
 /* 解决element-ui的table表格控件表头与内容列不对齐问题 */
 .el-table th.gutter {
-  display: table-cell !important;
+	display: table-cell !important;
 }
+
 .el-main {
-  padding: 0;
-  background-color: #f1f1f1;
+	padding: 0;
+	background-color: #f1f1f1;
 }

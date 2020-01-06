@@ -42,7 +42,9 @@
         <el-table-column prop="address" label="退货品项数"></el-table-column>
         <el-table-column prop="address" label="退货总数"></el-table-column>
         <el-table-column prop="address" label="退货总金额"></el-table-column>
-        <el-table-column label="操作" class="read"><span style="color: #47bac2;">查看</span></el-table-column>
+        <el-table-column label="操作" class="read">
+          <router-link to="ReDetails" style="text-decoration: none;"><span style="color: #47bac2;">查看</span></router-link>
+        </el-table-column>
       </el-table>
       <div class="pagination">
         <!-- 注释的代码 -->

@@ -16,6 +16,11 @@ import Distribution from '../components/distribution/Distribution.vue'
 import DisDetails from '../components/distribution/DisDetails.vue'
 // 引入确认配送页面
 import Sure from '../components/distribution/SureSend.vue'
+// 引入首页
+import HomePage from '../components/homePage/HomePage.vue'
+// 引入修正订单管理
+import AmendEdit from '../components/amend/AmendEdit.vue'
+
 Vue.use(VueRouter)
 
 // 路由规则
@@ -30,13 +35,43 @@ const routes = [{
 {
   path: '/home',
   component: Home,
-  children: [
-    { path: '/return', component: Return },
-    { path: '/ReDetails', component: ReDetails },
-    { path: '/Outlet', component: Outlet },
-    { path: '/Distribution', component: Distribution },
-    { path: '/DisDetails', component: DisDetails },
-    { path: '/Sure', component: Sure }
+  redirect: '/homePage',
+  children: [{
+    path: '/return',
+    component: Return
+  },
+  {
+    path: '/homePage',
+    component: HomePage
+  },
+  {
+    path: '/amendEdit',
+    component: AmendEdit
+  },
+  {
+    path: '/return',
+    component: Return
+  },
+  {
+    path: '/ReDetails',
+    component: ReDetails
+  },
+  {
+    path: '/Outlet',
+    component: Outlet
+  },
+  {
+    path: '/Distribution',
+    component: Distribution
+  },
+  {
+    path: '/DisDetails',
+    component: DisDetails
+  },
+  {
+    path: '/Sure',
+    component: Sure
+  }
   ]
 }
 ]
