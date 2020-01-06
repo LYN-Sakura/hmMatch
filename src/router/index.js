@@ -26,6 +26,10 @@ import Audit from '../components/Correcting/audit.vue'
 import Pass from '../components/Correcting/pass.vue'
 // 引入修正单-审核不通过 12
 import NoPass from '../components/Correcting/noPass.vue'
+// 引入采购单管理
+import Purchase from '../components/pzxiede/Purchase.vue'
+// 引入订单管理
+import Order from '../components/pzxiede/Order.vue'
 Vue.use(VueRouter)
 
 // 路由规则
@@ -82,6 +86,13 @@ const routes = [{
   {
     path: '/nopass',
     component: NoPass
+  },
+  {
+    path: '/purchase',
+    component: Purchase
+  }, {
+    path: '/order',
+    component: Order
   }
   ]
 }
