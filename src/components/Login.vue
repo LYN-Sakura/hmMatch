@@ -37,7 +37,16 @@ export default {
   },
   methods: {
     goToHome() {
-      this.$router.push('home')
+      if (this.input === '' && this.input === '') {
+        return this.$message.error('登陆信息不能为空')
+      }
+      if (this.input === 'admin' && this.input1 === '123456') {
+        this.$router.push('home')
+        this.$message.success('登陆成功')
+      } else {
+        this.$message.error('账号或者密码错误')
+        return false
+      }
     }
   }
 }

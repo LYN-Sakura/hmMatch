@@ -30,7 +30,8 @@ import {
   TableColumn,
   Pagination,
   Row,
-  Alert
+  Alert,
+  Message
 } from 'element-ui'
 
 Vue.use(Container)
@@ -63,3 +64,4 @@ Vue.use(Table)
 Vue.use(Pagination)
 Vue.use(Row)
 Vue.use(Alert)
+Vue.prototype.$message = Message
