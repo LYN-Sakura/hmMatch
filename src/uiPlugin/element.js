@@ -31,7 +31,10 @@ import {
   Pagination,
   Row,
   Alert,
-  Message
+  Message,
+  Switch,
+  MessageBox,
+  Dialog
 } from 'element-ui'
 
 Vue.use(Container)
@@ -64,4 +67,7 @@ Vue.use(Table)
 Vue.use(Pagination)
 Vue.use(Row)
 Vue.use(Alert)
+Vue.use(Switch)
+Vue.use(Dialog)
 Vue.prototype.$message = Message
+Vue.prototype.$confirm = MessageBox.confirm
