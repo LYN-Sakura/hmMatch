@@ -2,20 +2,20 @@
   <div>
     <!-- 今日订单 -->
     <el-card class="info">
-      <i>i</i>
+      <i class="el-icon-bell"></i>
       今日订单
     </el-card>
     <el-row class="todayOrder" :gutter="30">
       <el-col :span="8">
         <el-card shadow="never">
           <div class="floorOne">您今天有采购单</div>
-          <div class="floorTwo">
+          <div @click="gotoCaigou" class="floorTwo">
             168
             <span>张</span>
           </div>
           <div class="floorThree">
             待确认
-            <i>i</i>
+            <i class="el-icon-warning-outline"></i>
           </div>
           <div class="floorFour">请您尽快处理！！！</div>
         </el-card>
@@ -23,13 +23,13 @@
       <el-col :span="8">
         <el-card shadow="never">
           <div class="floorOne">您今天有采购单</div>
-          <div class="floorTwo">
+          <div @click="gotoCaigou" class="floorTwo">
             168
             <span>张</span>
           </div>
           <div class="floorThree">
             已发货
-            <i>i</i>
+            <i class="el-icon-s-promotion"></i>
           </div>
           <div class="floorFour">请您悉知！！！</div>
         </el-card>
@@ -37,13 +37,13 @@
       <el-col :span="8">
         <el-card shadow="never">
           <div class="floorOne">您今天有采购单</div>
-          <div class="floorTwo">
+          <div @click="gotoCaigou" class="floorTwo">
             168
             <span>张</span>
           </div>
           <div class="floorThree">
             已完成
-            <i>i</i>
+            <i class="el-icon-s-flag"></i>
           </div>
           <div class="floorFour">请您悉知！！！</div>
         </el-card>
@@ -51,7 +51,7 @@
     </el-row>
     <!-- 今日修正订单 -->
     <el-card class="info">
-      <i>i</i>
+      <i class="el-icon-bell"></i>
       今日修正订单
     </el-card>
     <el-row class="todayRevisionOrder" :gutter="30">
@@ -64,7 +64,7 @@
           </div>
           <div class="floorThree">
             审核未通过
-            <i>i</i>
+            <i class="el-icon-warning-outline"></i>
           </div>
           <div class="floorFour">请您尽快处理！！！</div>
         </el-card>
@@ -78,7 +78,7 @@
           </div>
           <div class="floorThree">
             需要审核
-            <i>i</i>
+            <i class="el-icon-warning-outline"></i>
           </div>
           <div class="floorFour">请您悉知！！！</div>
         </el-card>
@@ -92,7 +92,7 @@
           </div>
           <div class="floorThree">
             审核已通过
-            <i>i</i>
+            <i class="el-icon-s-flag"></i>
           </div>
           <div class="floorFour">请您悉知！！！</div>
         </el-card>
@@ -105,6 +105,12 @@
 export default {
   data() {
     return {}
+  },
+  methods: {
+    gotoCaigou() {
+      console.log('1')
+      this.$router.push('purchase')
+    }
   }
 }
 </script>
@@ -156,6 +162,7 @@ export default {
   font-stretch: normal;
   line-height: 6px;
   letter-spacing: 0px;
+  cursor: pointer;
 }
 
 .floorTwo span {
@@ -167,8 +174,9 @@ export default {
 }
 .floorThree {
   margin: 20px auto 0;
-  width: 100px;
+  width: 140px;
   height: 19px;
+  text-align: center;
   font-family: MicrosoftYaHei;
   font-size: 20px;
   font-weight: normal;

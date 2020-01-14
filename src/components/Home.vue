@@ -10,13 +10,13 @@
             <i class="iconfont icon-home"></i>
             首页
           </div>
-          <el-menu router default-active="2" class="el-menu-vertical-demo" background-color="#313743" text-color="#d1d2d4" active-text-color="#ffd04b">
+          <el-menu router unique-opened :default-active="urlPath" class="el-menu-vertical-demo" background-color="#313743" text-color="#d1d2d4" active-text-color="#ffd04b">
             <el-submenu :index="i + ''" v-for="(val1, i) in sideData" :key="val1.id">
               <template slot="title">
                 <i class="el-icon-location"></i>
                 <span>{{ val1.title }}</span>
               </template>
-              <el-menu-item :index="'/' + val2.path" v-for="val2 in val1.children" :key="val2.id">{{val2.title}}</el-menu-item>
+              <el-menu-item :index="'/' + val2.path" v-for="val2 in val1.children" :key="val2.id">{{ val2.title }}</el-menu-item>
             </el-submenu>
           </el-menu>
         </div>
@@ -38,6 +38,7 @@
 export default {
   data() {
     return {
+      urlPath: '',
       // 侧边栏导航假数据
       sideData: [
         {
@@ -74,6 +75,23 @@ export default {
         }
       ]
       // 一级标题图标
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.urlPath = to.path
+      window.sessionStorage.setItem('urlPath', this.urlPath)
+    }
+  },
+  created() {
+    this.getUrlPath()
+  },
+  methods: {
+    getUrlPath() {
+      let urlpath = window.sessionStorage.getItem('urlPath')
+      if (urlpath) {
+        this.urlPath = urlpath
+      }
     }
   }
 }
@@ -136,7 +154,7 @@ header.el-header {
     text-indent: 2em;
   }
 }
-.el-main{
+.el-main {
   height: 990px;
   overflow: hidden;
 }
