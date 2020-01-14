@@ -47,7 +47,7 @@ export default {
             {
               id: 11,
               title: '采购管理',
-              path: 'caigou1'
+              path: 'purchase'
             },
             {
               id: 12,

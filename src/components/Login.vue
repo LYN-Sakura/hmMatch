@@ -9,17 +9,17 @@
           <!-- 输入框 -->
           <el-input v-model="input" placeholder="供应商编号" prefix-icon="el-icon-user-solid" class="login_input"></el-input>
           <el-input placeholder="登录密码" v-model="input1" show-password prefix-icon="el-icon-s-cooperation" class="login_input"></el-input>
-          <el-button type="primary" round>登录</el-button>
+          <el-button @click="goToHome" type="primary" round>登录</el-button>
         </el-tab-pane>
         <el-tab-pane label="门店" name="second">
           <el-input v-model="input" placeholder="门店编号" prefix-icon="el-icon-user-solid" class="login_input"></el-input>
           <el-input placeholder="登录密码" v-model="input1" show-password prefix-icon="el-icon-s-cooperation" class="login_input"></el-input>
-          <el-button type="primary" round>登录</el-button>
+          <el-button @click="goToHome" type="primary" round>登录</el-button>
         </el-tab-pane>
         <el-tab-pane label="运营后台" name="third">
           <el-input v-model="input" placeholder="运营后台编号" prefix-icon="el-icon-user-solid" class="login_input"></el-input>
           <el-input placeholder="登录密码" v-model="input1" show-password prefix-icon="el-icon-s-cooperation" class="login_input"></el-input>
-          <el-button type="primary" round>登录</el-button>
+          <el-button @click="goToHome" type="primary" round>登录</el-button>
         </el-tab-pane>
       </el-tabs>
     </div>
@@ -30,9 +30,14 @@
 export default {
   data() {
     return {
-      activeName: 'second',
+      activeName: 'third',
       input: '',
       input1: ''
+    }
+  },
+  methods: {
+    goToHome() {
+      this.$router.push('home')
     }
   }
 }
@@ -94,8 +99,8 @@ export default {
 }
 .el-button--primary:hover {
   color: #fff;
-  background-color: #48bbc2 !important;
-  border-color: #48bbc2 !important;
+  background-color: #48bbc2;
+  border-color: #48bbc2;
 }
 .el-button--primary:focus {
   background-color: #48bbc2;
