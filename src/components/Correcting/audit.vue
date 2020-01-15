@@ -1,9 +1,7 @@
 <template>
   <div>
     <!-- 面包屑导航栏 -->
-    <crumbs class="crumbs"
-            nav1="订单管理"
-            nav2="采购单管理"></crumbs>
+    <crumbs class="crumbs" nav1="修正单管理" nav2="待审核"></crumbs>
 
     <!-- 修正单卡片视图 -->
     <el-row class="el_row_card">
@@ -14,42 +12,29 @@
           <p class="titie_size">产品修正详情</p>
           <el-row>
             <!-- 修正信息详情 -->
-            <el-col :span="11"
-                    class="el_col_box">
-              <div class="input_box"
-                   v-for='(item,index) in infoAudit'
-                   :key='index'>
-                <span class="span_input">{{item.name}}</span>
-                <el-input class="el_input_box"
-                          placeholder="请输入内容"
-                          :value="item.aduitNum"></el-input>
+            <el-col :span="11" class="el_col_box">
+              <div class="input_box" v-for="(item, index) in infoAudit" :key="index">
+                <span class="span_input">{{ item.name }}</span>
+                <el-input class="el_input_box" placeholder="请输入内容" :value="item.aduitNum"></el-input>
               </div>
             </el-col>
             <!-- 修正日期 -->
             <el-col :span="13">
               <div class="input_box">
                 <span class="span_input">创建日期</span>
-                <el-date-picker type="daterange"
-                                start-placeholder="开始日期"
-                                end-placeholder="结束日期"
-                                :default-time="['00:00:00', '23:59:59']"></el-date-picker>
+                <el-date-picker type="daterange" start-placeholder="开始日期" end-placeholder="结束日期" :default-time="['00:00:00', '23:59:59']"></el-date-picker>
               </div>
               <div class="input_box1">
                 <span class="span_input">验收日期</span>
-                <el-date-picker type="daterange"
-                                start-placeholder="开始日期"
-                                end-placeholder="结束日期"
-                                :default-time="['00:00:00', '23:59:59']"></el-date-picker>
+                <el-date-picker type="daterange" start-placeholder="开始日期" end-placeholder="结束日期" :default-time="['00:00:00', '23:59:59']"></el-date-picker>
               </div>
               <div class="input_box1">
                 <span class="span_input">拒收总数</span>
-                <el-input placeholder="2"
-                          class="input_box_span"></el-input>
+                <el-input placeholder="2" class="input_box_span"></el-input>
               </div>
               <div class="input_box1">
                 <span class="span_input">门店</span>
-                <el-input placeholder="岳家嘴地铁店"
-                          class="input_box_span"></el-input>
+                <el-input placeholder="岳家嘴地铁店" class="input_box_span"></el-input>
               </div>
             </el-col>
           </el-row>
@@ -62,12 +47,9 @@
           <p class="titie_size">产品修正流程</p>
           <!-- 动态图 -->
           <el-row>
-            <el-col :span='16'>
-              <img src="../../assets/images/组-13.png"
-                   class="img_info">
-            </el-col>
-            <el-col :span='8'>
-              <ul class="ul_info" >
+            <el-col :span="16"><img src="../../assets/images/组-13.png" class="img_info" /></el-col>
+            <el-col :span="8">
+              <ul class="ul_info">
                 <li>
                   <span class="round" style="background:#893DCB"></span>
                   创建
@@ -78,7 +60,7 @@
                 </li>
                 <li>
                   <span class="round" style="background:#36D8DA"></span>
-                门店举证
+                  门店举证
                 </li>
                 <li>
                   <span class="round" style="background:#F6AC46"></span>
@@ -101,10 +83,10 @@
         <!-- 产品表单 -->
         <el-card class="el_row_box1">
           <p class="titie_size marBottom">产品表单</p>
-          <ul v-for="(item,index) in formMent" :key="index" class="mentInfo">
-            <li>{{item.infoName}}</li>
-            <li>{{item.infoNum}}</li>
-            <li>{{item.infoMessage}}</li>
+          <ul v-for="(item, index) in formMent" :key="index" class="mentInfo">
+            <li>{{ item.infoName }}</li>
+            <li>{{ item.infoNum }}</li>
+            <li>{{ item.infoMessage }}</li>
           </ul>
         </el-card>
       </el-col>
@@ -113,9 +95,7 @@
         <el-card class="el_row_box1">
           <p class="titie_size marBottom">产品审核详情</p>
           <textarea maxlength="100"></textarea>
-          <div style="height:20px">
-            <span class="span_Card">0/100字</span>
-          </div>
+          <div style="height:20px"><span class="span_Card">0/100字</span></div>
           <el-button class="btn_css" style="background-color:#5DF3AB">审核通过</el-button>
           <el-button class="btn_css" style="background-color:#7AA3F7">审核不通过</el-button>
         </el-card>
@@ -126,7 +106,7 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       // 产品修真单数据
       infoAudit: [
@@ -171,69 +151,68 @@ export default {
       ]
     }
   }
-
 }
 </script>
 
 <style lang="less" scoped>
 .crumbs {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 62px;
-    background-color: #f1f1f1;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 62px;
+  background-color: #f1f1f1;
 }
 .el_row_card {
-    height: 355px;
-    margin-left: 62px;
+  height: 355px;
+  margin-left: 62px;
 }
 .info_card1 {
-    height: 355px;
-    margin-right: 30px;
-    border-radius: 10px;
-    padding: 30px 40px 40px 40px;
-    box-sizing: border-box;
+  height: 355px;
+  margin-right: 30px;
+  border-radius: 10px;
+  padding: 30px 40px 40px 40px;
+  box-sizing: border-box;
 }
 .titie_size {
-    margin: 0;
-    font-weight: 700;
+  margin: 0;
+  font-weight: 700;
 }
 .el_input_box {
-    width: 265px;
-    height: 30px;
+  width: 265px;
+  height: 30px;
 }
 .span_input {
-    display: inline-block;
-    width: 105px;
-    outline: none;
+  display: inline-block;
+  width: 105px;
+  outline: none;
 }
 .input_box {
-    margin-top: 30px;
-    display: inline-block;
+  margin-top: 30px;
+  display: inline-block;
 }
 /deep/.data_input {
-    width: 140px;
+  width: 140px;
 }
 .input_box1 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 /deep/.input_box_span {
-    width: 350px;
+  width: 350px;
 }
 .img_info {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 .ul_info {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 80px;
-    margin-left: 23px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+  margin-left: 23px;
 }
 .round {
-    display: inline-block;
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
 }
 // 产品表单+审核
 .el_row_father {
@@ -247,7 +226,7 @@ export default {
   margin-right: 30px;
   border-radius: 10px;
   padding: 30px 40px 40px 40px;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 ul {
   list-style: none;
@@ -260,7 +239,7 @@ ul {
   margin: 0;
   padding: 0;
 }
-.mentInfo li{
+.mentInfo li {
   float: left;
   width: 33%;
   padding: 0;
@@ -272,21 +251,21 @@ ul {
 textarea {
   width: 100%;
   height: 150px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 10px;
-  border: 1px solid #F5F5F5;
-  resize:none;
+  border: 1px solid #f5f5f5;
+  resize: none;
   outline: none;
 }
 .span_Card {
   float: right;
-  color: #A8A8A8;
+  color: #a8a8a8;
   font-size: 12px;
 }
 .marBottom {
   margin-bottom: 30px;
 }
-/deep/.el-button+.el-button {
+/deep/.el-button + .el-button {
   margin-left: 0;
   margin-left: 65px;
 }

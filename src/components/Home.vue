@@ -52,7 +52,7 @@ export default {
             },
             {
               id: 12,
-              title: '修真单管理',
+              title: '修正单管理',
               path: 'amendEdit'
             },
             {
