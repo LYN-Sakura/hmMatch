@@ -32,24 +32,47 @@
       <el-row>
         <!-- 数据区域 -->
         <el-table :data="tableData" style="width: 100%">
-          <el-table-column type="selection" width="55"> </el-table-column>
-          <el-table-column prop="date" label="退货单编号" width="180"> </el-table-column>
-          <el-table-column prop="name" label="创建日期" width="180"> </el-table-column>
-          <el-table-column prop="address" label="订购品项数"> </el-table-column>
-          <el-table-column prop="address" label="订购总数"> </el-table-column>
-          <el-table-column prop="address" label="退货总金额"> </el-table-column>
-          <el-table-column prop="address" label="订单状态"> </el-table-column>
+          <el-table-column type="selection"> </el-table-column>
+          <el-table-column prop="bianhao" label="退货单编号"> </el-table-column>
+          <el-table-column prop="date" label="创建日期"> </el-table-column>
+          <el-table-column prop="xiangnum" label="订购品项数"> </el-table-column>
+          <el-table-column prop="dingnum" label="订购总数"> </el-table-column>
+          <el-table-column prop="backmoney" label="退货总金额"> </el-table-column>
+          <el-table-column label="订单状态">
+            <template slot-scope="scope">
+              <el-switch v-model="scope.row.state" active-text="已处理" inactive-text="未处理"></el-switch>
+            </template>
+          </el-table-column>
           <el-table-column label="操作" class="read">
-            <span style="color: #47bac2;"> 查看</span>
+            <template slot-scope="scope">
+              <el-button type="primary" icon="el-icon-edit" circle @click="xiu(scope.row.id)"></el-button>
+              <el-button type="danger" icon="el-icon-delete" circle @click="shan(scope.row.id)"></el-button>
+            </template>
           </el-table-column>
         </el-table>
         <!-- 分页 -->
         <div class="pur_pagi">
-          <el-pagination   :page-size="100" layout="prev, pager, next, jumper" :total="1000">
-          </el-pagination>
+          <el-pagination :page-size="100" layout="prev, pager, next, jumper" :total="1000"> </el-pagination>
         </div>
       </el-row>
     </el-card>
+    <!-- 修改弹出框 -->
+    <el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
+      <span class="wode">退货单编号</span>
+      <el-input v-model="form.bianhao" disabled></el-input>
+      <span class="wode">创建日期</span>
+      <el-input v-model="form.date" disabled> </el-input>
+      <span class="wode">订购品项数</span>
+      <el-input v-model="form.xiangnum"> </el-input>
+      <span class="wode">订购总数</span>
+      <el-input v-model="form.dingnum"> </el-input>
+      <span class="wode">退货总金额</span>
+      <el-input v-model="form.backmoney"> </el-input>
+      <span slot="footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="querenxiugai">确 定</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -62,35 +85,72 @@ export default {
       input1: '',
       value: '',
       value1: '',
+      // 修改框显隐
+      dialogVisible: false,
       tableData: [
+        { id: 0, bianhao: '4258795415856', date: '2020.1.14', xiangnum: 5, dingnum: 200, backmoney: 1350, state: true },
         {
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          id: 2,
+          bianhao: '4258795415856',
+          date: '2020.1.14',
+          xiangnum: 5,
+          dingnum: 200,
+          backmoney: 1350,
+          state: false
         },
-        {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
-        },
-        {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        },
-        {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
-        }
-      ]
+        { id: 3, bianhao: '4258795415856', date: '2020.1.14', xiangnum: 5, dingnum: 200, backmoney: 1350, state: true }
+      ],
+      // 修改找到的数据
+      form: {}
+    }
+  },
+  methods: {
+    shan(id) {
+      this.$confirm('此操作将永久删除该采购单，是否继续?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      })
+        .then(() => {
+          this.$message({
+            type: 'success',
+            message: '删除成功!'
+          })
+          var index = this.tableData.findIndex(res => {
+            return res.id === id
+          })
+          console.log(index)
+          this.tableData.splice(index, 1)
+        })
+        .catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消删除'
+          })
+        })
+    },
+    xiu(id) {
+      var index = this.tableData.findIndex(res => {
+        return res.id === id
+      })
+      console.log(index)
+      this.index = index
+      window.localStorage.setItem('index', index)
+      this.form = this.tableData[this.index]
+      this.dialogVisible = true
+    },
+    querenxiugai() {
+      console.log(this.form)
+      var index = window.localStorage.getItem('index')
+      this.tableData[index] = this.form
+      this.dialogVisible = false
     }
   }
 }
 </script>
 
 <style>
-  .pur_pagi .btn-prev {
+.pur_pagi .btn-prev {
   border: 1px solid#4c4c4c;
   margin-left: 5px !important;
   border-radius: 5px !important;
@@ -104,6 +164,9 @@ export default {
   border: 1px solid#4c4c4c;
   margin: 0 5px !important;
   border-radius: 5px !important;
+}
+.cell {
+  text-align: center;
 }
 </style>
 
@@ -130,10 +193,6 @@ export default {
   height: 30px;
 }
 .el-button {
-  width: 100px;
-  border-radius: 50px !important;
-  float: right;
-  margin-left: 20px;
 }
 
 .el-button--primary {
@@ -164,5 +223,9 @@ export default {
 .el-pagination {
   float: right;
   margin-top: 30px;
+}
+span.wode {
+  display: block;
+  margin: 10px 0;
 }
 </style>
