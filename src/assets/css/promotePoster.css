@@ -1,0 +1,139 @@
+* {
+    vertical-align:middle;
+}
+.promotePoster{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    margin-top: 2.75rem;
+    background-color: #0A0306;
+    -webkit-overflow-scrolling:touch;
+}::-webkit-scrollbar{
+    display: none;
+}
+/* 操作说明 */
+.promotePosterTop{
+    width: 100%;
+    height: 28rem;
+}
+.promotePosterTop img{
+    width: 100%;
+    height:100%;
+}
+/* 海报logo及卡片 */
+.promotePosterBottom{
+    width: 100%;
+    margin-bottom: 6rem;
+}
+.promotePosterNav{
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+.promotePosterNav img{
+    width: 10rem;
+    height: 2.6rem;
+}
+.promotePosterCard {
+    width: 100%;
+    background: url("../../../static/images/promotePoster/vvbjggnm9.png") 0% 100% no-repeat;
+    background-size:12rem 8rem;
+}
+.promotePosterCard ul,
+.promotePosterCard ul li{
+    width: 100%;
+}
+.promotePosterCard-one{
+    width: 100%;
+    height: 8rem;
+    background: url("../../../static/images/promotePoster/vvbjggnm3.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.promotePosterCard-one p:nth-child(1){
+    font-size:1.6rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:#FFFFFF;
+    padding-top: 2rem;
+    text-align: center; 
+}
+.promotePosterCard-one p:nth-child(2){
+    display: inline-block;
+    width: 7.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;  
+    font-size:0.75rem;
+    margin-top: 0.75rem;
+    color: #FFFFFF;
+    background: url("../../../static/images/promotePoster/vvbjggnm4.png");
+    background-size:100% 100%;
+    
+}
+.promotePosterCard-two{
+    width: 100%;
+    height: 8rem;
+    background: url("../../../static/images/promotePoster/vvbjggnm5.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.promotePosterCard-two p:nth-child(1){
+    font-size:1.6rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:#FFFFFF;
+    padding-top: 2rem;
+    text-align: center; 
+}
+.promotePosterCard-two p:nth-child(2){
+    display: inline-block;
+    width: 7.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;  
+    font-size:0.75rem;
+    margin-top: 0.75rem;
+    color: #FFFFFF;
+    background: url("../../../static/images/promotePoster/vvbjggnm6.png");
+    background-size:100% 100%;
+    
+}
+.promotePosterCard-three{
+    width: 100%;
+    height: 8rem;
+    background: url("../../../static/images/promotePoster/vvbjggnm7.png") no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.promotePosterCard-three p:nth-child(1){
+    font-size:1.6rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:#FFFFFF;
+    padding-top: 2rem;
+    text-align: center; 
+}
+.promotePosterCard-three p:nth-child(2){
+    display: inline-block;
+    width: 7.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;  
+    font-size:0.75rem;
+    margin-top: 0.75rem;
+    color: #FFFFFF;
+    background: url("../../../static/images/promotePoster/vvbjggnm8.png");
+    background-size:100% 100%;
+}
+.promotePosterLabel{
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.75rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    opacity:0.7;
+}
+

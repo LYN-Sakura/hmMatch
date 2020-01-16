@@ -1,0 +1,86 @@
+.ccia {
+    .act_top {
+      padding: 20px 0;
+      border-bottom: 1px solid #edecec;
+      .act_topL {
+        float: left;
+        /deep/ .el-button {
+          background-color: #cba361;
+          color: #ffffff;
+          font-size: 14px;
+          cursor: pointer;
+          i {
+            margin-right: 3px;
+          }
+        }
+      }
+      .act_topR {
+        float: right;
+        overflow: hidden;
+        > div {
+          float: left;
+        }
+        .selbox {
+          margin-left: 20px;
+          /deep/ .el-input--suffix {
+            border-radius: 0;
+            width: 100px;
+            .el-input__inner {
+              border-radius: 0;
+              width: 100%;
+              .el-input__suffix {
+                width: 20px;
+              }
+            }
+          }
+        }
+        .searchinputbox {
+          width: 400px;
+          /deep/ .el-input__inner {
+            border-radius: 0;
+            width: 100%;
+          }
+        }
+        button {
+          width: 57px;
+          height: 32px;
+          text-align: center;
+          line-height: 30px;
+          outline: none;
+          border: 0;
+          float: left;
+          background-color: #cba361;
+          color: #ffffff;
+          font-family: PingFang-SC-Medium;
+          font-size: 13px;
+          cursor: pointer;
+        }
+      }
+    }
+    .act_con {
+      width: 100%;
+      overflow: hidden;
+      /deep/.el-table th {
+        padding: 10px 0;
+      }
+      .edit {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        border-radius: 2px;
+        border: 1px solid #eff0f0;
+        text-align: center;
+        cursor: pointer;
+        i {
+          line-height: 22px;
+          font-size: 13px;
+        }
+      }
+      .edit:hover {
+        border-color: #cba361;
+        i {
+          color: #cba361;
+        }
+      }
+    }
+  }

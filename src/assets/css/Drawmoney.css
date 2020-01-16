@@ -1,0 +1,169 @@
+.slide-fade-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+.hint {
+  background-color: #000000;
+  width: 10rem;
+  height: 3.125rem;
+  text-align: center;
+  line-height: 3.125rem;
+  border-radius: 0.1875rem;
+  color: white;
+  position: absolute;
+  top: 30.75rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.Draw_cont {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  position: relative;
+}
+.draw_top {
+  width: 100%;
+  background-color: white;
+  padding: 0.625rem 0.75rem;
+  box-sizing: border-box;
+  text-align: left;
+  position: relative;
+  border-top: 0.3125rem solid #f5f5f5;
+  border-bottom: 0.0625rem solid #f5f5f5;
+  margin-top: 2.75rem;
+}
+.draw_top > span {
+  color: #666666;
+  font-size: 0.8125rem;
+}
+.draw_top > p {
+  position: relative;
+  line-height: 2.125rem;
+}
+.draw_top > p input {
+  width: 100%;
+  font-size: 1.125rem;
+  color: #000000;
+  text-indent: 1.5625rem;
+}
+::-webkit-input-placeholder {
+  color: #000000;
+}
+.draw_top > p i {
+  font-style: normal;
+  font-size: 1.125rem;
+  color: #000000;
+  position: absolute;
+  left: 0rem;
+}
+.draw_top > p small {
+  color: #e02e2e;
+  font-size: 0.75rem;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+}
+.procedure {
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 0rem 0.75rem;
+}
+.procedure div {
+  font-size: 0.75rem;
+}
+.procedure div span {
+  color: #999999;
+}
+.procedure div i {
+  font-style: normal;
+  color: #e02e2e;
+  text-indent: 0.35rem;
+}
+.Draw_cont > p {
+  line-height: 2.25rem;
+  background-color: #f5f5f5;
+  font-size: 0.8125rem;
+  color: #666666;
+  text-align: left;
+  margin-left: 0.75rem;
+}
+.draw_way {
+  width: 100%;
+  padding-bottom: 0.9375rem;
+  background-color: white;
+}
+
+.draw_way > p {
+  width: 100%;
+  padding: 0px 0.75rem;
+  text-align: left;
+  line-height: 2.75rem;
+  height: 2.75rem;
+  border-bottom: 0.0625rem solid #e6e6e6;
+}
+.draw_way ul li {
+  width: 100%;
+  height: 2.75rem;
+  line-height: 2.75rem;
+  border-bottom: 0.0625rem solid #e6e6e6;
+}
+.draw_way ul li p {
+  width: 100%;
+  padding: 0px 0.75rem;
+  text-align: left;
+  height: 100%;
+}
+.draw_way p span {
+  color: #333333;
+  font-size: 0.8125rem;
+  width: 35%;
+  text-align: left;
+  display: inline-block;
+}
+
+.draw_way p select,
+.draw_way p input {
+  border: none;
+  outline: none;
+  font-size: 0.8125rem;
+  color: #666666;
+  height: 80%;
+  background: white;
+}
+.draw_way p select {
+  width: 60%;
+  margin-left: -2.5%;
+}
+.draw_way ul li:last-of-type input::-webkit-input-placeholder {
+  color: #b3b3b3;
+  font-size: 0.8125rem;
+}
+.Draw_cont > button {
+  position: absolute;
+  width: 80.5%;
+  height: 2.6875rem;
+  line-height: 2.6875rem;
+  background: linear-gradient(to right, #ebc690, #a88850);
+  left: 50%;
+  border: none;
+  outline: none;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1rem;
+  border-radius: 1.375rem;
+  box-shadow: 0px 0px 0.1rem 0px #9c1d4b;
+  top: 27.75rem;
+}

@@ -1,0 +1,228 @@
+.ccia {
+    text-align: left;
+    padding: 0px 30px 20px 0px;
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    .ccia_top {
+      border-bottom: 1px solid #efefef;
+      padding-left: 30px;
+      box-sizing: border-box;
+    }
+    .ccia_contentbox {
+      .ccia_content {
+        /deep/ .el-tabs__nav {
+          width: 1200px;
+          height: 54px;
+          line-height: 54px;
+          margin-left: 20px;
+        }
+        /deep/ .el-tabs__item {
+          width: 10%;
+          font-size: 16px;
+          color: #333;
+          font-weight: bold;
+          text-align: center;
+        }
+        /deep/ .el-tabs__active-bar {
+          width: 10%;
+        }
+        /deep/ .el-tabs__content {
+          padding-left: 20px;
+          box-sizing: border-box;
+        }
+        .basicItem {
+          margin-bottom: 10px;
+          .basicItem_l {
+            width: 250px;
+            margin-right: 4px;
+            background: rgba(248, 248, 248, 1);
+            padding: 20px 0;
+            color: #000000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+            box-sizing: border-box;
+          }
+          .basicItem_r {
+            flex: 1;
+            width: 100%;
+            height: 45px;
+            padding: 0px 30px 0 0;
+            position: relative;
+            p {
+              color: rgba(153, 153, 153, 1);
+              font-size: 12px;
+            }
+            /deep/ .el-form-item__label {
+              color: #333333;
+              font-size: 16px;
+              font-weight: bold;
+              font-family: PingFang-SC-Bold;
+            }
+  
+            /deep/ .el-tag {
+              height: 32px;
+              padding-left: 9px;
+              padding-right: 9px;
+              cursor: pointer;
+              line-height: 32px;
+              background-color: #fff;
+              color: #6b6b6b;
+              border: 1px solid rgba(239, 239, 239, 1);
+            }
+            /deep/ .el-input__inner {
+              border-radius: 0;
+              background-color: white;
+            }
+            /deep/ .el-date-editor.el-input {
+              width: 187px;
+            }
+            .addBasicFoot {
+              margin: 14px;
+            }
+            .foodWeith {
+              width: 100%;
+            }
+            .foodInventory {
+              /deep/ .el-input {
+                width: 50%;
+              }
+              /deep/ .el-checkbox-group {
+                width: 40%;
+              }
+            }
+            .fenxiao_list {
+              width: 100%;
+              display: flex;
+              flex-wrap: wrap;
+              padding: 5px;
+              border: 1px solid rgb(221, 221, 221);
+              li {
+                width: 22%;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                overflow: hidden;
+              }
+            }
+            .fenxiao {
+              display: flex;
+              flex-direction: column;
+              .fenxiao_top {
+                text-align: center;
+              }
+              .fenxiao_inp {
+                display: flex;
+                justify-content: space-between;
+                /deep/ .el-input {
+                  &:last-child {
+                    margin-left: 5px;
+                  }
+                }
+                p {
+                  text-align: center;
+                  height: 20px;
+                  line-height: 20px;
+                }
+              }
+            }
+            .js {
+              position: absolute;
+              bottom: 0px;
+              left: 130px;
+              color: #666666;
+              font-size: 12px;
+            }
+          }
+          .independent {
+            height: 85px;
+            > .js {
+              position: absolute;
+              bottom: 0px;
+              left: 130px;
+              color: #666666;
+              line-height: 20px;
+              font-size: 12px;
+            }
+          }
+          .nosingimg {
+            height: auto;
+            /deep/ .el-form-item__content {
+              width: 50%;
+            }
+            /deep/ .el-input-group__append{
+                background: white;
+                border-radius: 0;
+            }
+            .img{
+              width: 120px;
+              height: 120px;
+              margin-left: 130px;
+              border-radius: 5px;
+              overflow: hidden;
+              position: relative;
+              span{
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                text-align: center;
+                color:red;
+                background: white;
+                border-top-right-radius: 5px;
+                line-height: 15px;
+                top: 0px;
+                right: 0px;
+                cursor: pointer;
+                position: absolute;
+              }
+              img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+              }
+            }
+          }
+          .ratio {
+            width: 100%;
+            padding-left: 130px;
+            height: 40px;
+            text-align: left;
+            line-height: 40px;
+            margin: 20px 0px 60px;
+            box-sizing: border-box;
+            border-radius: 0px;
+            input {
+              width: 103px;
+              text-indent: 5px;
+              float: left;
+              border: 1px solid #cccccc;
+            }
+            div {
+              float: left;
+              padding: 0px 10px;
+              border: 1px solid #cccccc;
+              border-left: 0px;
+              text-align: center;
+            }
+          }
+        }
+        .itemBG {
+          background: rgba(248, 248, 248, 1);
+        }
+        .addBaseFoot {
+          margin-left: 150px;
+          margin-top: 28px;
+          button {
+            padding: 9px 23px;
+          }
+        }
+  
+        .discount {
+          /deep/ .el-input-group {
+            width: 302px;
+            margin-bottom: 9px;
+          }
+        }
+      }
+    }
+  }

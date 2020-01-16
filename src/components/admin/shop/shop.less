@@ -1,0 +1,142 @@
+.ccia {
+  .niu {
+    display: inline-block;
+    padding: 4px 7px;
+    border-radius: 2px;
+    font-size: 14px;
+  }
+  .warning {
+    background: #e8e8e8;
+    color: #999999;
+  }
+  .info {
+    background: #cba361;
+    color: #feffff;
+  }
+  .ccia_top {
+    > button {
+      > i {
+        font-weight: 600;
+      }
+      width: 87px;
+      height: 32px;
+      line-height: 32px;
+      color: #ffffff;
+      border: 0;
+      font-size: 14px;
+      border-radius: 2px;
+      background-color: #cba361;
+      outline: none;
+      cursor: pointer;
+      float: left;
+    }
+    > div {
+      float: right;
+      /deep/ .el-date-editor {
+        width: 350px;
+        .el-range-separator {
+          width: 15px;
+          padding: 0px;
+        }
+        .el-range-input {
+          width: 150px;
+        }
+      }
+      button {
+        border-radius: 0;
+        padding: 0 16px;
+        float: right;
+        width: 60px;
+        height: 32px;
+        line-height: 32px;
+        background-color: #cba361;
+        color: #ffffff;
+        border: 0;
+      }
+      .el-select {
+        width: 116px;
+        border-radius: 0;
+        float: right;
+        margin-left: 6px;
+      }
+    }
+
+    .el-input {
+      float: right;
+      width: 500px;
+      border-radius: 0;
+    }
+    /deep/ .el-input__inner {
+      border-radius: 0;
+    }
+  }
+  .ccia_contenttop {
+    line-height: 44px;
+    text-align: left;
+    button {
+      width: 60px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      color: #858585;
+      font-size: 14px;
+      border-radius: 2px;
+      background: #fdfdfd;
+      outline: #eaebec solid 1px;
+      border: none;
+      margin-right: 10px;
+      cursor: pointer;
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+  /deep/ .cell {
+    > img {
+      width: 62px;
+      height: 38px;
+      float: left;
+    }
+    .img_txt{
+      float: left;
+      margin-left: 8px;
+      > span {
+        width: 60px;
+        height: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp:2;
+        overflow: hidden;
+        line-height: 19px;
+        color: #555555;
+        font-size: 14px;
+      }
+    }
+  }
+}
+/deep/ .el-dialog {
+  overflow: hidden;
+}
+.edit {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: 2px;
+  border: 1px solid #eff0f0;
+  // border: 1px solid red;
+  text-align: center;
+  cursor: pointer;
+  i {
+    line-height: 22px;
+    font-size: 13px;
+  }
+}
+.edit:hover {
+  border: 1px solid #cba361;
+  i {
+    color: #cba361;
+  }
+}

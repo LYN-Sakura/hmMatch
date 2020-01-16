@@ -1,0 +1,661 @@
+.Index_content{
+    width: 100%;
+    height: 92.8%;
+    background-color: #F3F5F7;
+    overflow: scroll;
+    -webkit-overflow-scrolling:touch;
+}::-webkit-scrollbar{
+    display: none;
+}
+/* 头部搜索及更多商家*/
+.content_top{
+    width: 100%;
+    height: 21rem;
+    position: relative;
+    background-size: cover;background-position: center center;
+    background-repeat: no-repeat;
+}
+/* 头部搜索及选项 */
+.indexSearchCho{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* z-index: 1; */
+}
+.indexSearchInp{
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-left:0.8rem;
+    margin-right:0.8rem;
+    opacity:1;
+    border-bottom: 1px solid #ffffff;
+}
+.indexSearchInp img{
+    width:  0.9rem;
+    height: 0.9rem;
+    
+}
+.indexSearchInp input{
+    width:  90%;
+    height: 2rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color:transparent ;
+    border: 0;
+}
+.indexChoiceInp{
+    width: 100%;
+    opacity:1;
+}
+.indexChoiceInp ul{
+    overflow: hidden;
+}
+.indexChoiceInp ul li{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+}
+.indexChoiceInp img{
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1.5rem;
+}
+.indexChoiceInp p{
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-top: 0.8rem;
+}
+
+/* 头部更多商家按钮 */
+.banBottom{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* z-index: 1; */
+}
+.bottomMore{
+    margin:0 0.4rem;
+    height: 3.1rem;
+    line-height: 3.1rem;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.bottomMore-r{
+    font-size: 0.8125rem;
+    display: flex;
+}
+.bottomMore-r img{
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left:0.75rem; 
+    margin-top:0.75rem; 
+}
+.bottomMoreCity{
+    margin: 0 0.3rem;
+}
+.bottomMore-l{
+    margin-top: 0.75rem;
+    margin-right:0.75rem; 
+}
+.bottomMore-l p{
+    width: 4.3125rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: #FFFFFF;
+    background: url('../../../static/images/index/adffg8.png');
+    background-size: 100% 100%;
+    
+}
+/* 商家头像轮播 */
+.storeBan{
+    width: 100%;
+    height: 11.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #F5F5F5;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+.storeBan .storeBanner{
+    width: 25%;
+    height: 5.9rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.storeBan .storeBanner img{
+    margin-top:1rem; 
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+.storeBan .storeBanner p{
+    width: 100%;
+    height:0.9rem;
+    line-height: 0.9rem;
+    /* text-align: center; */
+    margin-top:0.3rem; 
+    font-size:0.8125rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    overflow: hidden;
+}
+/* logo轮播 */
+.logoBan{
+    width: 100%;
+    height: 7.5rem;
+    /* margin-bottom: 0.5rem; */
+}
+.logoBan .swiper_logoBan{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.logoBan .logoBanner img {
+    width: 100%;
+    height: 100%;
+    /* vertical-align:middle; */
+} 
+.swiper_logoBan /deep/ .swiper-pagination{
+    display: inline-block;
+    height: .625rem;
+}
+.swiper_logoBan /deep/ .swiper-pagination-bullet{
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    background: #DADADA;
+    border-radius: 50%;
+    margin: 0px .5rem;
+}
+.swiper_logoBan /deep/ .swiper-pagination-bullet-active{
+    background: grey;
+}
+/* 霸王免单卡 */
+.overCard{
+    padding: 0.5rem 0.75rem ;
+    background-color: #FFFFFF;
+}
+.overCardName {
+    font-size: 1rem;
+    font-family:MicrosoftYaHei-Bold;
+    font-weight: bold;
+    height: 3;
+    border-left: 3px solid #CEA769;
+    padding-left: 0.4rem;
+    text-align: left;
+}
+.overCardB{
+    height: 9rem;
+    width: 100%;
+    background: url("../../../static/images/index/adffg11.png");
+    background-size:100% 100%;
+    margin-top: 0.75rem;
+    position: relative;
+}
+.overCardB p:nth-child(1){
+    height: 1.625rem;
+    width: 4.75rem;
+    line-height: 1.625rem;
+    text-align: center;
+    position: absolute;
+    background: url("../../../static/images/index/adffg12.png");
+    background-size:100% 100%;
+    font-size: 0.6rem;
+    bottom: 1.5rem;
+    left: 1rem;
+}
+.overCardB p:nth-child(1) a{
+    color: #282726;
+}
+.overCardB p:nth-child(2){
+    height: 1.625rem;
+    width: 4.75rem;
+    line-height: 1.625rem;
+    text-align: center;
+    border-radius: 0.81rem;
+    position: absolute;
+    font-size: 0.6rem;
+    background-color: #ffffff;
+    bottom: 1.5rem;
+    right: 1.3rem;
+}
+.overCardB p:nth-child(2) a{
+    color: #AE8339;
+}
+.falshSale{
+    position: absolute;
+    top: 2.5rem;
+    right: 2.1rem;
+}
+.falshSale span{
+    display: inline;
+    font-size:1rem;
+    color: #FFFFFF;
+    font-family:Impact;
+    font-weight:400;
+}
+/* 热门活动 */
+.hotEvent{
+    margin-top: 0.5rem;
+    padding: 0 0.75rem 1rem 0.75rem ;
+    background-color: #FFFFFF;
+}
+.hotEventT{
+    overflow: hidden;
+    padding: 0.5rem 0;
+}
+.hotEventT p:nth-child(1){
+    float: left;
+    font-size: 1rem;
+    font-family:MicrosoftYaHei-Bold;
+    font-weight: bold;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    border-left: 3px solid #CEA769;
+    padding-left: 0.4rem;
+}
+.hotEventT p:nth-child(2){
+    float: right;
+    font-size: 0.875rem;
+    font-family:PingFang-SC-Medium;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding-right: 0.4rem;
+    color: #999999;
+}
+.hotEventT p:nth-child(2) img{
+    width: 0.3rem;
+    height: 0.7rem;
+}
+.hotEventOne{
+    width: 100%;
+    margin-top: 0.4rem;
+}
+.hotEventOneT{
+    width: 100%;
+    height: 8rem;
+    /* background: url("../../../static/images/index/adffg15.png"); */
+    background-size:100% 100%!important;
+    border-radius:10px;
+}
+.hotEventOneT p:nth-child(1){
+    /* line-height: 4rem; */
+    font-size:1.5rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:#FFFFFF;
+    padding-top: 1.6rem;
+    text-align: center;  
+}
+.hotEventOneT p:nth-child(2){
+    text-align: center;
+    margin-top: 0.625rem;  
+}
+.hotEventOneT p:nth-child(2) span{
+    font-size:0.55rem;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:#FFFFFF;
+    padding: 0.3rem 1.3rem;
+    background-color: #000000;
+    border-radius:10px 0 10px 0;
+}
+.EventOne{
+    overflow: hidden;
+}
+.EventOne span:nth-child(1){
+    font-size:0.6rem;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    float: left;
+    margin-left: 0.5rem;
+    color: #AE8339;
+}
+.EventOne span:nth-child(2){
+    font-size:0.65rem;
+    float: right;
+    
+}
+/* .hotEventTwo{
+    width: 100%;
+    margin-top: 0.8rem;
+}
+.hotEventTwoT{
+    width: 100%;
+    height: 7rem;
+    background: url("../../../static/images/index/adffg46.png");
+    background-size:100% 100%;
+    border-radius:10px;
+}
+.hotEventTwoT p:nth-child(1){
+    
+    font-size:1.5rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:#FFFFFF;
+    padding-top: 1.6rem;
+    text-align: center;  
+}
+.hotEventTwoT p:nth-child(2){
+    text-align: center;
+    margin-top: 0.625rem;  
+}
+.hotEventTwoT p:nth-child(2) span{
+    font-size:0.55rem;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:#FFFFFF;
+    padding: 0.3rem 1.3rem;
+    background-color: #000000;
+    border-radius:10px 0 10px 0;
+}
+.EventTwo{
+    overflow: hidden;
+}
+.EventTwo span:nth-child(1){
+    font-size:0.6rem;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    float: left;
+    margin-left: 0.5rem;
+    color: #AE8339;
+    
+}
+.EventTwo span:nth-child(2){
+    font-size:0.65rem;
+    float: right;
+} */
+
+/* 活动商家 */
+.EventStore{
+    margin-top: 0.5rem;
+    background-color: #FFFFFF;
+}
+.EventStoreT{
+    overflow: hidden;
+    padding: 0.5rem 0.75rem;
+}
+.EventStoreT p:nth-child(1){
+    float: left;
+    font-size: 1rem;
+    font-family:MicrosoftYaHei-Bold;
+    font-weight: bold;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    border-left: 3px solid #CEA769;
+    padding-left: 0.4rem;
+}
+.EventStoreT p:nth-child(2){
+    float: right;
+    font-size: 0.875rem;
+    font-family:PingFang-SC-Medium;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding-right: 0.4rem;
+    color: #999999;
+}
+.EventStoreT p:nth-child(2) img{
+    width: 0.3rem;
+    height: 0.7rem;
+}
+/* 活动商家轮播  */
+.eventStoreZ{
+    width: 100%; 
+    margin-top: 0.2rem;
+    /* overflow: hidden; */
+}
+.eventStoreBanner{
+    width: 100%;
+    z-index: 0;
+}
+.eventStoreZ .active{
+    width: 85%;  
+    height: 11rem;
+    background: url("../../../static/images/index/adffg27.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.activeT{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.activeT-l{
+    margin-top: 0.3rem;
+    margin-left: 1rem;
+    width: 3.6rem;
+    height: 3.6rem;
+}
+.activeT-l img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1.8rem;
+}
+.activeT-r{
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.activeT-r>p>img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.activeT-r>p{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    width: 13rem;
+    color: #8F5A3A;
+    text-align: left;
+}
+.activeT-r>p>span{
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    padding-left: 0.2rem;
+}
+.activeB {
+    color:#F2D6BA;
+    margin-left: 1.3rem;
+    margin-top: 1.6rem;
+    text-align: left;
+    height: 5rem;
+}
+.activeB  p:nth-child(1){
+    font-size: 0.9rem;
+}
+.activeB p:nth-child(2){
+    width: 11.5rem;
+    font-size: 0.75rem;
+    height:2rem;
+    line-height: 1rem;
+    margin-top: 0.1rem;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}
+.seeDetailBtn{
+    position: absolute;
+    bottom: 2rem;
+    right: 1.4rem;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.6rem;
+    font-size: 0.5rem;
+    border: 1px solid #3E3E4A;
+}
+/* 左右滑动查看更多 */
+.eventStoreZ-huadong{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+.indexSwp-prev{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+.indexSwp-hint{
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+}
+.indexSwp-next{
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* 专享优惠卷 */
+.coupon{
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: #FFFFFF;
+    margin-bottom: 4rem;
+}
+.couponT{
+    padding:0.6rem;
+    font-size:1rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:800;
+    color:rgba(48,48,48,1);
+    text-align: center;
+}
+.couponT span{
+    font-size:0.9rem;
+    font-family:PingFang-SC-Heavy;
+    font-weight:bold;
+    color:rgba(255,170,0,1);
+}
+.coupon ul{
+    padding: 0 0.6rem;
+    border-bottom: 1px solid #EFEFF4;
+}
+.cardbox{
+    width: 100%;
+    height: 7.5rem;
+    background: url("../../../static/images/index/adffg32.png") no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    margin-bottom: 0.6rem;
+}
+.couponL{
+    float: left;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.8rem;
+}
+.couponL img{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 1.8rem;
+    border: 2px solid #ffffff;
+}
+.couponL-worth{
+    font-size:0.5rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    margin-top: 0.2rem;
+}
+.couponL>span{
+    font-size:0.8rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+}
+.couponL>span>p{
+    display: inline-block;
+    font-size:1.5rem;
+    
+}
+.couponZ{
+    width: 56%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    margin-top: 1rem;
+}
+.couponZname{
+    width: 100%;
+    font-size:0.9rem;
+    text-align: left;
+    font-family:PingFang-SC-Bold;
+    font-weight:bold;
+    color:rgba(255,255,255,1);
+}
+
+.couponZinfo{
+    font-size:0.7rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    padding: 0.5rem 0;
+    text-align: left;
+}
+.couponZinfo p:nth-child(1){
+    
+}
+.couponZinfo p:nth-child(2){
+    height: 2rem;
+    line-height:1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.couponZtime{
+    font-size:0.6rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(229,206,179,1);
+    text-align: left;
+    margin-top: 5px;
+}
+.couponR{
+    width: 14%;
+    float: left;
+    width:0.7rem;
+    font-size:0.9rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    margin: 1.4rem 0 0 1.1rem;
+}
+.couponR a{
+    color:rgba(255,255,255,1);
+}
+.allCard{
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.allCard p{
+    font-size:0.9rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(48,48,48,1);
+    margin-right: 0.2rem;
+}
+.allCard img{
+    width:0.8rem;
+    height:0.4rem;
+}

@@ -1,30 +1,25 @@
-# heima_match
->项目KO
+# bfno
 
-1. 按需引入已配置
-2. ESlint检验已优化
-3. 调用axios方式为this.$http
-4. 新建分支写，写完先上传分支
-4. 多写注释!
+> A Vue.js project
 
-## Project setup 
-```
-yarn install 项目设置
-```
+## Build Setup
 
-### Compiles and hot-reloads for development
-```
-yarn serve	在开发环境下进行编译
-```
+``` bash
+# install dependencies
+npm install
 
-### Compiles and minifies for production
-```
-yarn build  在生产环境下进行编译
-```
+# serve with hot reload at localhost:8080
+npm run dev
 
-### Lints and fixes files
-```
-yarn lint	整理和修复文件
-```
+# build for production with minification
+npm run build
 
-#### 自定义配置=>请参阅配置参考。
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+# noderely
+cnpm install --save axios
+cnpm install iview --save
+cnpm install vue-lazyload --save
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
